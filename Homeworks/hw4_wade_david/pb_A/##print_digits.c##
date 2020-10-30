@@ -1,0 +1,33 @@
+#include<assert.h>
+#include<stdio.h>
+
+  int mem;
+  while (n != 0) {
+    mem = n % 10;
+    printf("%d\n", mem);
+    n = n / 10;
+  }
+  return 0;
+}
+
+
+int main(void)
+{
+  int rv;
+  printf("299\n");
+  rv = printDecimalDigits(299);
+  assert(rv == 0);
+  printf("-8\n");
+  rv = printDecimalDigits(-8);
+  assert(rv == -1);
+  printf("0\n");
+  rv = printDecimalDigits(0);
+  assert(rv == -1);
+  printf("123456789\n");
+  rv = printDecimalDigits(123456789);
+  assert(rv == 0);
+  return 0;
+}
+    
+  
+  
